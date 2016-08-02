@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<style type="text/css" media="screen">
+	canvas{
+		border: 2px solid black;
+	}	
+</style>
+
+<canvas class="the-canvas" height="500px" width="500px">
+	<!-- Canvas cannot draw. Canvas is an empty palatte on which to draw. Our stuff is going to go here -->
+</canvas>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+	var canvas = document.getElementsByClassName('the-canvas')[0];
+	var context = canvas.getContext('2d');
+
+	console.log(context);
+
+	$('canvas').click(function(event){
+		// call circle draw function and pass coordinates of click
+		var x = event['clientX'];
+		var y = event['clientY'];
+		context.beginPath();
+		context.fillStyle = "#00FFFF";
+		context.arc(x,y,25,0,2*Math.PI);
+		context.fill();
+	});
+
+
+
+	// move the car
+	function move(){
+		// var x = 
+		// var y =
+		
+	}
+
+	// draw a car
+	context.beginPath();
+	context.rect(50,50,150,50);
+	context.stroke();
+	context.fillStyle = "#000000";
+	context.fill(context.arc(75,100,15,0,2*Math.PI));
+	context.fill(context.arc(175,100,15,0,2*Math.PI));
+
+
+
+	// context.beginPath();
+	// context.moveTo(100,100); // start at 100, 100
+	// context.lineTo(200,200); // draw to 200, 200
+	// context.lineTo(300,100); // without lifting the brush, draw to 300, 100
+	// context.lineTo(100,200); // without lifting the brush, draw to 100, 200
+	// context.lineTo(300,150); // without lifting the brush, draw to 300, 150
+	// context.lineTo(100,100); // without lifting the brush, draw to 100, 100
+	// context.moveTo(450,200);
+	// context.lineTo(450,100);
+	// context.strokeStyle = "#FF0000";
+	// context.stroke();
+
+	// // draw a circle
+	// context.beginPath();
+	// context.fillStyle = "#FFFF00";
+	// context.arc(375,175,50, 0.25*Math.PI, 1.75*Math.PI);
+	// context.fill();
+
+	// // draw a rectangle
+	// context.beginPath();
+	// context.fillStyle = "#00FFFF";
+	// context.rect(300,20,100,100);
+	// context.fill();
+
+
+	// var x = 100;
+	// var y = 100;
+	// var radius = 10;
+	// var endArc = 2; // aka 0 * Math.PI
+	// var r = 0;
+	// var g = 0;
+	// var b = 0;
+
+	// function draw(){
+	// 	context.fillStyle = "#"+r+g+b;
+	// 	context.beginPath();
+	// 	context.clearRect(0,0,500,500);
+	// 	context.arc(x,y,radius,0,endArc*Math.PI);
+	// 	context.fill();
+	// 	x += 4;
+	// 	y += 2;
+	// 	radius += 1;
+	// 	endArc += .1;
+	// 	r += 1;
+	// 	b += 2;
+	// }
+
+	// draw();
+
+	// var ball = setInterval(draw,40);
+	
+</script>
+
+</body>
+</html>
